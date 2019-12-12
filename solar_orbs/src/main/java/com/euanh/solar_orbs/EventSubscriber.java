@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -70,8 +71,8 @@ public class EventSubscriber {
 	public static void onRegisterBlocks(Register<Block> event)
 	{
 		//Block Properties
-		solar_ore_properties = solar_ore_properties.hardnessAndResistance(3f, 3f);
-		lunar_ore_properties = lunar_ore_properties.hardnessAndResistance(3f,  3f);
+		solar_ore_properties = solar_ore_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE);
+		lunar_ore_properties = lunar_ore_properties.hardnessAndResistance(3f,  3f).harvestLevel(2).harvestTool(ToolType.PICKAXE);
 		
 		//Creating Blocks
 		solar_ore = new Block(solar_ore_properties);
