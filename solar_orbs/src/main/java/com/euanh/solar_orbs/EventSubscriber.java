@@ -26,6 +26,8 @@ public class EventSubscriber {
 	//Items
 	private static Item solar_orb = null;
 	private static Item lunar_orb = null;
+	private static Item solar_orb_shard = null;
+	private static Item lunar_orb_shard = null;
 	
 	//Blocks
 	private static Block solar_ore = null;
@@ -48,12 +50,16 @@ public class EventSubscriber {
 		//Creating Items
 		solar_orb = new Item(solar_orb_properties);
 		lunar_orb = new Item(lunar_orb_properties);
+		solar_orb_shard = new Item(new Item.Properties().group(GROUP));
+		lunar_orb_shard = new Item(new Item.Properties().group(GROUP));
 		solar_ore_bItem = new BlockItem(solar_ore, new Item.Properties().group(GROUP));
 		lunar_ore_bItem = new BlockItem(lunar_ore, new Item.Properties().group(GROUP));
 		
 		//Registering Items
 		event.getRegistry().registerAll(setup(solar_orb, "solar_orb"));
 		event.getRegistry().registerAll(setup(lunar_orb, "lunar_orb"));
+		event.getRegistry().registerAll(setup(solar_orb_shard, "solar_orb_shard"));
+		event.getRegistry().registerAll(setup(lunar_orb_shard, "lunar_orb_shard"));
 		event.getRegistry().registerAll(setup(solar_ore_bItem, "solar_ore"));
 		event.getRegistry().registerAll(setup(lunar_ore_bItem, "lunar_ore"));
 		

@@ -3,5 +3,7 @@
 	"itemGroup.solar_orbs": "Solar Orbs",
 	"item.solar_orbs.lunar_orb": "Lunar Orb",
 	"block.solar_orbs.lunar_ore": "Lunar Ore",
-	"block.solar_orbs.solar_ore": "Solar Ore"
+	"block.solar_orbs.solar_ore": "Solar Ore",
+	"item.solar_orbs.lunar_orb_shard": "Lunar Orb Shard",
+	"item.solar_orbs.solar_orb_shard" : "Solar Orb Shard"
 }
