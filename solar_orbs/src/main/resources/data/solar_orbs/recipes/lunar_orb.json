@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "solar_orbs:lunar_orb_shard"
+		},
+		{
+			"item": "solar_orbs:lunar_orb_shard"
+		},
+		{
+			"item": "solar_orbs:lunar_orb_shard"
+		},
+		{
+			"item": "solar_orbs:lunar_orb_shard"
+		}
+	],
+	"result":
+	{
+		"item": "solar_orbs:lunar_orb",
+		"count": 1
+	}
+}
