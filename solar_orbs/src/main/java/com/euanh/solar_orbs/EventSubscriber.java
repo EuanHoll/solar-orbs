@@ -71,12 +71,12 @@ public class EventSubscriber {
 	public static void onRegisterBlocks(Register<Block> event)
 	{
 		//Block Properties
-		solar_ore_properties = solar_ore_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE);
-		lunar_ore_properties = lunar_ore_properties.hardnessAndResistance(3f,  3f).harvestLevel(2).harvestTool(ToolType.PICKAXE);
+		solar_ore_properties = solar_ore_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(5);
+		lunar_ore_properties = lunar_ore_properties.hardnessAndResistance(3f,  3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(5);
 		
 		//Creating Blocks
-		solar_ore = new Block(solar_ore_properties);
-		lunar_ore = new Block(lunar_ore_properties);
+		solar_ore = new SolarOreBlock(solar_ore_properties);
+		lunar_ore = new SolarOreBlock(lunar_ore_properties);
 		
 		//Registering Blocks
 		event.getRegistry().registerAll(setup(solar_ore, "solar_ore"));
