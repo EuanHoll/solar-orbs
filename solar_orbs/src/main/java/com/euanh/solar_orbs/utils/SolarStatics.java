@@ -1,4 +1,4 @@
-package com.euanh.solar_orbs;
+package com.euanh.solar_orbs.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

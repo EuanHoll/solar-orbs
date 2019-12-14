@@ -1,4 +1,4 @@
-package com.euanh.solar_orbs;
+package com.euanh.solar_orbs.utils;
 
 import com.google.common.base.Supplier;
 

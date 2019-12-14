@@ -1,4 +1,4 @@
-package com.euanh.solar_orbs;
+package com.euanh.solar_orbs.blocks;
 
 import java.util.Random;
 

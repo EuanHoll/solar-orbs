@@ -1,6 +1,7 @@
-package com.euanh.solar_orbs;
+package com.euanh.solar_orbs.utils;
 
 
+import com.euanh.solar_orbs.blocks.SolarOreBlock;
 import com.euanh.solar_orbs.items.*;
 
 import net.minecraft.block.Block;
