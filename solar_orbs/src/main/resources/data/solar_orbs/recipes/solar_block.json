@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		},
+		{
+			"item": "solar_orbs:solar_orb"
+		}
+	],
+	"result":
+	{
+		"item": "solar_orbs:solar_block",
+		"count": 1
+	}
+}

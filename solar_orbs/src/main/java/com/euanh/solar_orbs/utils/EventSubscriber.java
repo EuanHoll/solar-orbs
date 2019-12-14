@@ -28,6 +28,8 @@ public class EventSubscriber {
 	//Block Properties
 	private static Block.Properties solar_ore_properties = Block.Properties.create(Material.ROCK);
 	private static Block.Properties lunar_ore_properties = Block.Properties.create(Material.ROCK);
+	private static Block.Properties solar_block_properties = Block.Properties.create(Material.ROCK);
+	private static Block.Properties lunar_block_properties = Block.Properties.create(Material.ROCK);
 	
 	//Items
 	private static Item solar_orb = null;
@@ -38,10 +40,14 @@ public class EventSubscriber {
 	//Blocks
 	public static Block solar_ore = null;
 	public static Block lunar_ore = null;
+	private static Block solar_block = null;
+	private static Block lunar_block = null;
 	
 	//ItemBlocks
 	private static BlockItem solar_ore_bItem = null;
 	private static BlockItem lunar_ore_bItem = null;
+	private static BlockItem solar_block_bItem = null;
+	private static BlockItem lunar_block_bItem = null;
 	
 	//ItemGroups
 	private static final ItemGroup GROUP = new ModItemGroup(SolarStatics.MOD_ID, () -> new ItemStack(solar_orb));
@@ -58,16 +64,24 @@ public class EventSubscriber {
 		lunar_orb = new ItemLunarOrb(lunar_orb_properties);
 		solar_orb_shard = new Item(new Item.Properties().group(GROUP));
 		lunar_orb_shard = new Item(new Item.Properties().group(GROUP));
+		
+		//Creating Block Items
 		solar_ore_bItem = new BlockItem(solar_ore, new Item.Properties().group(GROUP));
 		lunar_ore_bItem = new BlockItem(lunar_ore, new Item.Properties().group(GROUP));
+		solar_block_bItem = new BlockItem(solar_block, new Item.Properties().group(GROUP));
+		lunar_block_bItem = new BlockItem(lunar_block, new Item.Properties().group(GROUP));
 		
 		//Registering Items
 		event.getRegistry().registerAll(setup(solar_orb, "solar_orb"));
 		event.getRegistry().registerAll(setup(lunar_orb, "lunar_orb"));
 		event.getRegistry().registerAll(setup(solar_orb_shard, "solar_orb_shard"));
 		event.getRegistry().registerAll(setup(lunar_orb_shard, "lunar_orb_shard"));
+		
+		//Registering Block Items
 		event.getRegistry().registerAll(setup(solar_ore_bItem, "solar_ore"));
 		event.getRegistry().registerAll(setup(lunar_ore_bItem, "lunar_ore"));
+		event.getRegistry().registerAll(setup(solar_block_bItem, "solar_block"));
+		event.getRegistry().registerAll(setup(lunar_block_bItem, "lunar_block"));
 		
 		SolarStatics.LOGGER.info("Registered Items");
 	}
@@ -78,15 +92,21 @@ public class EventSubscriber {
 		//Block Properties
 		solar_ore_properties = solar_ore_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(5);
 		lunar_ore_properties = lunar_ore_properties.hardnessAndResistance(3f,  3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(5);
-		
+		solar_block_properties = solar_block_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(15);
+		lunar_block_properties = lunar_block_properties.hardnessAndResistance(3f, 3f).harvestLevel(2).harvestTool(ToolType.PICKAXE).lightValue(15);
+
 		//Creating Blocks
 		solar_ore = new SolarOreBlock(solar_ore_properties);
 		lunar_ore = new SolarOreBlock(lunar_ore_properties);
+		solar_block = new Block(solar_block_properties);
+		lunar_block = new Block(lunar_block_properties);
 		
 		//Registering Blocks
 		event.getRegistry().registerAll(setup(solar_ore, "solar_ore"));
 		event.getRegistry().registerAll(setup(lunar_ore, "lunar_ore"));
-		
+		event.getRegistry().registerAll(setup(solar_block, "solar_block"));
+		event.getRegistry().registerAll(setup(lunar_block, "lunar_block"));
+	
 		SolarStatics.LOGGER.info("Registered Blocks");
 	}
 

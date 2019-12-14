@@ -5,5 +5,7 @@
 	"block.solar_orbs.lunar_ore": "Lunar Ore",
 	"block.solar_orbs.solar_ore": "Solar Ore",
 	"item.solar_orbs.lunar_orb_shard": "Lunar Orb Shard",
-	"item.solar_orbs.solar_orb_shard" : "Solar Orb Shard"
+	"item.solar_orbs.solar_orb_shard" : "Solar Orb Shard",
+	"block.solar_orbs.lunar_block": "Lunar Block",
+	"block.solar_orbs.solar_block": "Solar Block"
 }
