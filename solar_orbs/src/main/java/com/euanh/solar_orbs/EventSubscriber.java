@@ -1,5 +1,8 @@
 package com.euanh.solar_orbs;
 
+
+import com.euanh.solar_orbs.items.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -49,8 +52,8 @@ public class EventSubscriber {
 		lunar_orb_properties = lunar_orb_properties.group(GROUP);
 		
 		//Creating Items
-		solar_orb = new Item(solar_orb_properties);
-		lunar_orb = new Item(lunar_orb_properties);
+		solar_orb = new ItemSolarOrb(solar_orb_properties);
+		lunar_orb = new ItemLunarOrb(lunar_orb_properties);
 		solar_orb_shard = new Item(new Item.Properties().group(GROUP));
 		lunar_orb_shard = new Item(new Item.Properties().group(GROUP));
 		solar_ore_bItem = new BlockItem(solar_ore, new Item.Properties().group(GROUP));
