@@ -15,6 +15,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 @EventBusSubscriber(modid = SolarStatics.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
@@ -35,8 +36,8 @@ public class EventSubscriber {
 	private static Item lunar_orb_shard = null;
 	
 	//Blocks
-	private static Block solar_ore = null;
-	private static Block lunar_ore = null;
+	public static Block solar_ore = null;
+	public static Block lunar_ore = null;
 	
 	//ItemBlocks
 	private static BlockItem solar_ore_bItem = null;
@@ -68,7 +69,7 @@ public class EventSubscriber {
 		event.getRegistry().registerAll(setup(solar_ore_bItem, "solar_ore"));
 		event.getRegistry().registerAll(setup(lunar_ore_bItem, "lunar_ore"));
 		
-		SolarStatics.LOGGER.debug("Registered Items");
+		SolarStatics.LOGGER.info("Registered Items");
 	}
 	
 	@SubscribeEvent
@@ -86,9 +87,16 @@ public class EventSubscriber {
 		event.getRegistry().registerAll(setup(solar_ore, "solar_ore"));
 		event.getRegistry().registerAll(setup(lunar_ore, "lunar_ore"));
 		
-		SolarStatics.LOGGER.debug("Registered Blocks");
+		SolarStatics.LOGGER.info("Registered Blocks");
 	}
 
+	@SubscribeEvent
+	public static void onCommonSetup(final FMLCommonSetupEvent event)
+	{
+		OreGeneration.SetupOres();
+		SolarStatics.LOGGER.info("Registered Generators");
+	}
+	
 	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry, final String name) {
 		return setup(entry, new ResourceLocation(SolarStatics.MOD_ID, name));
 	}
