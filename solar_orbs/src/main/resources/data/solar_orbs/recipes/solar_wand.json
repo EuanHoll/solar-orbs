@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" OO",
+		" BO",
+		"S  "
+	],
+	"key":
+	{
+		"O": { "item": "solar_orbs:solar_orb" },
+		"S": { "item": "minecraft:stick" },
+		"B": { "item": "solar_orbs:solar_block"}
+	},
+	"result": { "item": "solar_orbs:solar_wand" }
+}

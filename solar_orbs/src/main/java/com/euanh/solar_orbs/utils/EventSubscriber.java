@@ -32,10 +32,12 @@ public class EventSubscriber {
 	private static Block.Properties lunar_block_properties = Block.Properties.create(Material.ROCK);
 	
 	//Items
-	private static Item solar_orb = null;
-	private static Item lunar_orb = null;
+	public static Item solar_orb = null;
+	public static Item lunar_orb = null;
 	private static Item solar_orb_shard = null;
 	private static Item lunar_orb_shard = null;
+	private static Item solar_wand = null;
+	private static Item lunar_wand = null;
 	
 	//Blocks
 	public static Block solar_ore = null;
@@ -64,6 +66,8 @@ public class EventSubscriber {
 		lunar_orb = new ItemLunarOrb(lunar_orb_properties);
 		solar_orb_shard = new Item(new Item.Properties().group(GROUP));
 		lunar_orb_shard = new Item(new Item.Properties().group(GROUP));
+		solar_wand = new ItemSolarWand(new Item.Properties().group(GROUP));
+		lunar_wand = new ItemLunarWand(new Item.Properties().group(GROUP));
 		
 		//Creating Block Items
 		solar_ore_bItem = new BlockItem(solar_ore, new Item.Properties().group(GROUP));
@@ -76,6 +80,8 @@ public class EventSubscriber {
 		event.getRegistry().registerAll(setup(lunar_orb, "lunar_orb"));
 		event.getRegistry().registerAll(setup(solar_orb_shard, "solar_orb_shard"));
 		event.getRegistry().registerAll(setup(lunar_orb_shard, "lunar_orb_shard"));
+		event.getRegistry().registerAll(setup(solar_wand, "solar_wand"));
+		event.getRegistry().registerAll(setup(lunar_wand, "lunar_wand"));
 		
 		//Registering Block Items
 		event.getRegistry().registerAll(setup(solar_ore_bItem, "solar_ore"));
