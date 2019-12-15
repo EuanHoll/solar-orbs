@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "solar_orbs:solar_block"
+		}
+	],
+	"result":
+	{
+		"item": "solar_orbs:solar_orb",
+		"count": 9
+	}
+}
