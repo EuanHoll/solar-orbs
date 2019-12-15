@@ -1,6 +1,8 @@
 package com.euanh.solar_orbs.items;
 
 import com.euanh.solar_orbs.utils.EventSubscriber;
+
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
@@ -31,6 +33,11 @@ public class ItemSolarWand extends ToolItem
 		worldIn.playSound((PlayerEntity)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
 		playerIn.addStat(Stats.ITEM_USED.get(this));
 		return new ActionResult<>(ActionResultType.SUCCESS, itemstack);
+	}
+	
+	@Override
+	public float getDestroySpeed(ItemStack stack, BlockState state) {
+		return 1f;
 	}
 	
 }

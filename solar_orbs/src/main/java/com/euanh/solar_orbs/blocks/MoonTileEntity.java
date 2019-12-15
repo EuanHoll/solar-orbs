@@ -1,8 +1,6 @@
 package com.euanh.solar_orbs.blocks;
 
 import com.euanh.solar_orbs.utils.EventSubscriber;
-import com.euanh.solar_orbs.utils.TimeManager;
-
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;

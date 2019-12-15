@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		},
+		{
+			"item": "solar_orbs:lunar_block"
+		}
+	],
+	"result":
+	{
+		"item": "solar_orbs:moon_block",
+		"count": 1
+	}
+}
