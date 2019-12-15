@@ -24,16 +24,10 @@ public class ItemLunarWand extends ToolItem
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
 		ItemStack itemstack = playerIn.getHeldItem(handIn);
-		SolarStatics.LOGGER.info(String.valueOf(itemstack.getDamage()));
 		if (!playerIn.abilities.isCreativeMode) {
 		    itemstack.damageItem(1, playerIn, (p_220040_1_) -> {
                 p_220040_1_.sendBreakAnimation(handIn);
              });
-		    if (itemstack.getDamage() == 0)
-		    {
-		    	itemstack.shrink(1);
-		    	worldIn.playSound((PlayerEntity)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
-		    }
 		}
 		worldIn.setDayTime(13000);
 		worldIn.playSound((PlayerEntity)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
