@@ -1,8 +1,6 @@
 package com.euanh.solar_orbs.items;
 
 import com.euanh.solar_orbs.utils.EventSubscriber;
-import com.euanh.solar_orbs.utils.SolarStatics;
-
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;

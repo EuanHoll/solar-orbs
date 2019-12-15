@@ -9,5 +9,7 @@
 	"block.solar_orbs.lunar_block": "Lunar Block",
 	"block.solar_orbs.solar_block": "Solar Block",
 	"item.solar_orbs.solar_wand": "Solar Wand",
-	"item.solar_orbs.lunar_wand": "Lunar Wand"
+	"item.solar_orbs.lunar_wand": "Lunar Wand",
+	"block.solar_orbs.sun_block": "Sun Block",
+	"block.solar_orbs.moon_block": "Moon Block"
 }

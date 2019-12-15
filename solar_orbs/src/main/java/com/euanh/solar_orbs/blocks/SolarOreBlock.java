@@ -17,7 +17,6 @@ public class SolarOreBlock extends Block{
 
 	@Override
 	public int getExpDrop(BlockState state, net.minecraft.world.IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
-		
 		return silktouch == 0 ? rangeRandom.nextInt(12) : 0;
 	}
 	
